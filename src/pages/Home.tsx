@@ -1,4 +1,5 @@
 import React from "react";
+import martechdevImage from "./../assets/maretechdevImage.png";
 
 const testimonials = [
   {
@@ -24,10 +25,27 @@ const testimonials = [
 const Home: React.FC = () => (
   <div className="bg-gray-950 min-h-screen text-gray-100">
     <div className="max-w-5xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-extrabold mb-6 text-blue-400">Welcome to MARE Tech Dev</h1>
-      <p className="text-lg text-gray-300 mb-8">
-        We build fast, scalable, and modern web solutions tailored to your business needs.
-      </p>
+      <section className="flex flex-col lg:flex-row items-center justify-between mb-12 gap-8">
+  <div className="flex-1">
+    <h1 className="text-4xl font-extrabold mb-4 text-blue-400">Welcome to MARE Tech Dev</h1>
+    <p className="text-lg text-gray-300 mb-6">
+      We build fast, scalable, and modern web solutions tailored to your business needs.
+    </p>
+    <a
+      href="/services"
+      className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded transition"
+    >
+      Explore Services
+    </a>
+  </div>
+  <div className="flex-1 max-w-md">
+    <img
+      src={martechdevImage}
+      alt="Tech illustration"
+      className="rounded-lg shadow-lg w-full object-cover"
+    />
+  </div>
+</section>
 
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h2>
