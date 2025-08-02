@@ -30,7 +30,7 @@ const Home: React.FC = () => (
       {/* Hero + Why Choose Us section */}
       <section className="flex flex-col lg:flex-row items-center justify-between mb-12 gap-8">
         <div className="flex-1 space-y-6">
-          <div>
+          <div className="transition-all duration-700 ease-in-out transform hover:scale-105">
             <h1 className="text-4xl font-extrabold mb-4 text-blue-400">
               Welcome to MARE Tech Dev
             </h1>
@@ -40,14 +40,14 @@ const Home: React.FC = () => (
             </p>
             <a
               href="/services"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded transition"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded transition duration-300"
             >
               Explore Services
             </a>
           </div>
 
           {/* Why Choose Us inserted here */}
-          <div>
+          <div className="transition-all duration-700 ease-in-out transform hover:scale-105">
             <h2 className="text-2xl font-bold text-white mb-4">
               Why Choose Us?
             </h2>
@@ -61,7 +61,7 @@ const Home: React.FC = () => (
         </div>
 
         {/* Image on the right */}
-        <div className="flex-1 max-w-md mx-auto">
+        <div className="flex-1 max-w-md mx-auto transform transition-transform duration-700 hover:scale-105">
           <img
             src={martechdevImage}
             alt="Tech illustration"
@@ -77,7 +77,7 @@ const Home: React.FC = () => (
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="bg-gray-900 border border-gray-700 rounded-lg p-6 shadow hover:shadow-lg transition"
+              className="bg-gray-900 border border-gray-700 rounded-lg p-6 shadow transition-all duration-500 hover:shadow-xl hover:scale-105"
             >
               <div className="flex items-center mb-4">
                 <img
@@ -90,22 +90,24 @@ const Home: React.FC = () => (
                   <p className="text-sm text-gray-500">{t.country}</p>
                 </div>
               </div>
-              <p className="text-gray-300 italic">"{t.comment}"</p>
+              <p className="text-gray-300 italic transition-opacity duration-300 hover:opacity-80">
+                "{t.comment}"
+              </p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Final CTA */}
-      <section>
+      <section className="transition-transform duration-700 hover:translate-y-1">
         <h2 className="text-2xl font-bold text-white mb-4">Ready to start?</h2>
         <p className="text-gray-400 mb-4">
           Check out our{" "}
-          <a href="/services" className="text-blue-500 underline">
+          <a href="/services" className="text-blue-500 underline hover:text-blue-400">
             services
           </a>{" "}
           or{" "}
-          <a href="/contact" className="text-blue-500 underline">
+          <a href="/contact" className="text-blue-500 underline hover:text-blue-400">
             get in touch
           </a>{" "}
           for a free consultation.
