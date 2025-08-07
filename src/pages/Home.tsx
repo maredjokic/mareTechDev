@@ -98,6 +98,9 @@ const Home: React.FC = () => (
         </div>
       </section>
 
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7703386870993127"
+     crossorigin="anonymous"></script>
+
       {/* Final CTA */}
       <section className="transition-transform duration-700 hover:translate-y-1">
         <h2 className="text-2xl font-bold text-white mb-4">Ready to start?</h2>
