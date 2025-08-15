@@ -19,7 +19,7 @@ const projects = [
 ];
 
 const Portfolio: React.FC = () => (
-  <div className="max-w-5xl mx-auto px-6 py-12 text-gray-100">
+  <div className="section max-w-5xl mx-auto px-6 py-12 text-gray-100">
     <h1 className="text-4xl font-extrabold mb-6 text-blue-400">Portfolio</h1>
     <div className="grid gap-6 md:grid-cols-2">
       {projects.map((p, i) => (

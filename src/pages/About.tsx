@@ -1,7 +1,7 @@
 import React from "react";
 
 const About: React.FC = () => (
-  <div className="max-w-4xl mx-auto px-6 py-12 text-gray-100">
+  <div className="section max-w-4xl mx-auto px-6 py-12 text-gray-100">
     <h1 className="text-4xl font-extrabold mb-6 text-blue-400">Who We Are</h1>
 
     <p className="mb-6 text-lg leading-relaxed text-gray-300">

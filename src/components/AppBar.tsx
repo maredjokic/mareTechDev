@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 const AppBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,24 +6,34 @@ const AppBar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  const scrollToSection = (index: number) => {
+    const container = document.querySelector(".sections-container");
+    if (container) {
+      container.scrollTo({
+        top: index * window.innerHeight,
+        behavior: "smooth",
+      });
+    }
+    closeMenu();
+  };
+
   return (
     <header className="top-0 left-0 w-full bg-gray-800 text-white shadow-md z-50">
       <nav className="container mx-auto px-4 flex items-center justify-between h-16 relative">
-        <Link
-          to="/"
+        <button
+          onClick={() => scrollToSection(0)}
           className="font-extrabold text-2xl tracking-tight text-white hover:text-blue-400 transition"
-          onClick={closeMenu}
         >
           MARE Tech Dev
-        </Link>
+        </button>
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          <Link to="/" className="hover:text-blue-400 transition">Home</Link>
-          <Link to="/about" className="hover:text-blue-400 transition">About</Link>
-          <Link to="/services" className="hover:text-blue-400 transition">Services</Link>
-          <Link to="/portfolio" className="hover:text-blue-400 transition">Portfolio</Link>
-          <Link to="/contact" className="hover:text-blue-400 transition">Contact</Link>
+          <button onClick={() => scrollToSection(0)} className="hover:text-blue-400 transition">Home</button>
+          <button onClick={() => scrollToSection(1)} className="hover:text-blue-400 transition">About</button>
+          <button onClick={() => scrollToSection(2)} className="hover:text-blue-400 transition">Services</button>
+          <button onClick={() => scrollToSection(3)} className="hover:text-blue-400 transition">Portfolio</button>
+          <button onClick={() => scrollToSection(4)} className="hover:text-blue-400 transition">Contact</button>
         </div>
 
         {/* Mobile menu button */}
@@ -52,11 +61,11 @@ const AppBar: React.FC = () => {
         {isOpen && (
           <div className="absolute top-full left-0 w-full bg-gray-800 text-white md:hidden shadow-md">
             <nav className="flex flex-col px-4 py-3 space-y-2 text-sm font-medium">
-              <Link to="/" className="hover:text-blue-400 transition" onClick={closeMenu}>Home</Link>
-              <Link to="/about" className="hover:text-blue-400 transition" onClick={closeMenu}>About</Link>
-              <Link to="/services" className="hover:text-blue-400 transition" onClick={closeMenu}>Services</Link>
-              <Link to="/portfolio" className="hover:text-blue-400 transition" onClick={closeMenu}>Portfolio</Link>
-              <Link to="/contact" className="hover:text-blue-400 transition" onClick={closeMenu}>Contact</Link>
+              <button onClick={() => scrollToSection(0)} className="hover:text-blue-400 transition">Home</button>
+              <button onClick={() => scrollToSection(1)} className="hover:text-blue-400 transition">About</button>
+              <button onClick={() => scrollToSection(2)} className="hover:text-blue-400 transition">Services</button>
+              <button onClick={() => scrollToSection(3)} className="hover:text-blue-400 transition">Portfolio</button>
+              <button onClick={() => scrollToSection(4)} className="hover:text-blue-400 transition">Contact</button>
             </nav>
           </div>
         )}

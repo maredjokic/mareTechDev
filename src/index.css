@@ -4,3 +4,30 @@ body {
   background-color: oklch(13% 0.028 261.692);
   color: white;
 }
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app {
+  height: 100%;
+}
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.section {
+  flex: 0 0 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+}

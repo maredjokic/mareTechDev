@@ -25,7 +25,7 @@ const testimonials = [
 ];
 
 const Home: React.FC = () => (
-  <div className="bg-gray-950 min-h-screen text-gray-100">
+  <div className="section bg-gray-950 min-h-screen text-gray-100">
     <div className="max-w-5xl mx-auto px-6 py-12">
       {/* Hero + Why Choose Us section */}
       <section className="flex flex-col lg:flex-row items-center justify-between mb-12 gap-8">

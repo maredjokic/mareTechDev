@@ -1,7 +1,7 @@
 import React from "react";
 
 const Contact: React.FC = () => (
-  <div className="max-w-3xl mx-auto px-6 py-12 text-gray-100">
+  <div className="section max-w-3xl mx-auto px-6 py-12 text-gray-100">
     <h1 className="text-4xl font-extrabold mb-6 text-blue-400">Get in Touch</h1>
     <p className="text-gray-300 mb-6">
       Let's build something amazing together. Whether you have an idea or just a question, feel free to reach out.

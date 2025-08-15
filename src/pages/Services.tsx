@@ -20,7 +20,7 @@ const services = [
 ];
 
 const Services: React.FC = () => (
-  <div className="max-w-4xl mx-auto px-6 py-12 text-gray-100">
+  <div className="section max-w-4xl mx-auto px-6 py-12 text-gray-100">
     <h1 className="text-4xl font-extrabold mb-6 text-blue-400">Our Services</h1>
     <div className="grid gap-6 sm:grid-cols-2">
       {services.map((s, i) => (
